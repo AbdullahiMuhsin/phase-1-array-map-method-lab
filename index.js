@@ -1,3 +1,4 @@
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -10,7 +11,25 @@ const tutorials = [
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
 ];
+function titleCased() {
+  const tutorials = [
+    'what does the this keyword mean?',
+    'The Test Driven Development Workflow',
+    'What is the Constructor OO pattern?',
+    'implementing Blockchain Web API',
+    'What is the difference between stopPropagation and preventDefault?',
+    'Immutable State and Pure Functions',
+    'what is the difference between == and ===?',
+    'what is the difference between event capturing and bubbling?',
+    'what is JSONP?'
+  ];
 
 const titleCased = () => {
   return tutorials
+  return tutorials.map(tutorial => {
+    return tutorial.split(' ').map(function (word) {
+      return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+  });
+}
 }
